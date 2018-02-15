@@ -116,7 +116,7 @@ do {
 			sleep(600);
 			// 寻找红包颜色
 			var chat = captureScreen();
-			for (let k = parseInt(HEIGHT * 0.9); k > parseInt(HEIGHT * 0.7); k--) {
+			for (let k = parseInt(HEIGHT * 0.9); k > parseInt(HEIGHT * 0.1); k--) {
 				var point = images.pixel(chat, parseInt(WIDTH * 0.5), k);
 				var red = colors.red(point),
 					green = colors.green(point),
@@ -124,7 +124,7 @@ do {
 				if (Math.abs(red - 250) + Math.abs(green - 158) + Math.abs(blue - 59) <= 15) {
 					// 找到红包
 					click(parseInt(WIDTH * 0.5), k);
-					sleep(600);
+					sleep(800);
 					// 寻找“开”
 					chat = captureScreen();
 					var count = 0;
